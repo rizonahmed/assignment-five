@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Home </title>
+
+  <!-- daisy ui cnd  and tailwind cdn here   -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- google font font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+<!-- font awesome cnd  -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+<body class="relative">
+
+      <!-- header start here  -->
+ <header class="sticky top-0 z-50 bg-[#FFFF]"> 
+    <nav class="bg-[#F9F7F3] ">
+   
+       
+       <div class="navbar bg-base-100 container mx-auto bg-transparent pb-8 pt-4">
+           <div class="navbar-start">
+             <button id="home" class="btn btn-large bg-[#B4F461] text-base font-bold px-6 hover:bg-[#B4F461]"> Home</button>
+           </div>
+           <div class="navbar-center flex items-center justify-center">
+                   <a href=""><img src="./photos/logo.png" alt=""></a>
+                   <a class="text-lg font-semibold pl-3" href="">Donate Banglades</a>
+              
+           </div>
+           <div class="navbar-end">
+               <p><img src="./photos/coin.png" alt=""></p>
+               <p id="main-balance" class="text-lg font-semibold text-slate-600 pl-2">6000 BDT</p>
+           </div>
+         </div>
+   </nav>
+   
+    </header>
+   <!-- header end  here  -->
+   
+   <!-- main section start here  -->
+   <main class="container mx-auto mt-24">
+
+    <h1 class="mb-6 text-4xl font-bold text-slate-800 "> Important FAQ  <i class="fa-solid fa-circle-question"></i> </h1>
+
+    <div class="collapse collapse-arrow bg-base-200 border border-gray-300 py-4">
+        <input type="radio" name="my-accordion-2" checked="checked" />
+        <div class="collapse-title text-xl font-medium"> What is the Document Object Moder ( DOM ) ? </div>
+        <div class="collapse-content">
+          <p>A programming interface for web documents.</p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200  border border-gray-300 py-4">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">How do you select an element from the DOM ?</div>
+        <div class="collapse-content">
+          <p>Use an ID to Select an Element with . getElementById() One way of selecting an element is by using the . getElementById() method and passing the desired ID as an argument.</p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200  border border-gray-300 py-4">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful ?</div>
+        <div class="collapse-content">
+          <p>Event delegation refers to the process of using event propagation (bubbling) to handle events at a higher level in the DOM than the element on which the event originated</p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200  border border-gray-300 py-4">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM ?</div>
+        <div class="collapse-content">
+          <p>ou can use the setAttribute() method.</p>
+        </div>
+      </div>
+
+   </main>
+<!-- main section end here  -->
+
+
+
+    <script src="secondfile.js"></script>
+    <script src="dom.js"></script>
+</body>
+</html>
