@@ -13,7 +13,6 @@ document.getElementById('home').addEventListener('click', function(){
     window.location.href = './index.html'
 })
 
- 
 function hideElement(id){
    
     document.getElementById('history-section').classList.add('hidden')
@@ -54,7 +53,6 @@ function historyCreate(Amount){
     historySec.appendChild(div)
     }
     
-    
     function historyCreate3(Amount){
     const historySec = document.getElementById('history-section')
     const d = new Date();
@@ -63,7 +61,7 @@ function historyCreate(Amount){
     div.innerHTML = `
      <div class="border border-slate-200 rounded-lg p-5 py-8 mb-3">
         <p class=" text-xl font-bold"> ${Amount} Taka is Donated for Aid for Injured in the Quota Movement</p>
-        <p class="text-lg pt-2">  date : ${text} </p>
+        <p class="text-lg pt-2">  Date : ${text} </p>
     
        </div>
     `

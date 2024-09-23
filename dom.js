@@ -2,7 +2,6 @@ document.getElementById('blog').addEventListener('click', function(){
     window.location.href = './home.html'
 })
 
- 
 document.getElementById('first-donation').addEventListener('click', function(){
     
     const firstInput = forInput('first-input');
@@ -70,7 +69,6 @@ document.getElementById('second-donation').addEventListener('click', function(){
     modal.showModal() 
     
     historyCreate2(secondInput)
-
 })
 
 
