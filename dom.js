@@ -30,6 +30,7 @@ document.getElementById('first-donation').addEventListener('click', function(){
     }
     document.getElementById('main-balance').innerText = subBalance;
     
+    document.getElementById('first-input').value = '';
     
    const modal = document.getElementById('my_modal_1') 
     modal.showModal()  
@@ -64,6 +65,8 @@ document.getElementById('second-donation').addEventListener('click', function(){
         return
     }
     document.getElementById('main-balance').innerText = subBalanceTwo; 
+
+    document.getElementById('second-input').value = '';
 
     const modal = document.getElementById('my_modal_1') 
     modal.showModal() 
@@ -100,6 +103,8 @@ document.getElementById('third-donation').addEventListener('click', function(){
         return
     }
     document.getElementById('main-balance').innerText = subBalanceThird; 
+
+    document.getElementById('third-input').value = '';
 
     const modal = document.getElementById('my_modal_1') 
     modal.showModal()  
