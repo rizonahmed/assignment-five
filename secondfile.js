@@ -1,26 +1,10 @@
-// document.getElementById('home').addEventListener('click', function(event){
-//     event.preventDefault()
-//     window.location.href = 'index.html'
-    
-// })
-
-
-function forFirstCard(id){
-const mainBalance = document.getElementById(id).innerText;
-    
-return mainBalance; 
-
+function forInput(id){
+    return parseFloat(document.getElementById(id).value)
 }
 
-function forFirstCard(id){
-const firstInput = document.getElementById(id).value;
-return firstInput; 
-
+function firstInnerText(id){
+    return parseFloat(document.getElementById(id).innerText)
 }
-function forFirstCard(id){
-    
-const firstBalance =  document.getElementById(id).innerText;
-return firstBalance; 
-
-
+function mainBalance(id){
+    return parseFloat(document.getElementById(id).innerText)
 }

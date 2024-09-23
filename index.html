@@ -15,14 +15,22 @@
 <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
 
 
+<style>
+  .background {
+      background-color: rgba(249, 247, 243, 0.7);
+
+      backdrop-filter: blur(10px);
+
+  }
+</style>
 
 
  </head>
  <body class="relative">
  
     <!-- header start here  -->
- <header class="sticky top-0 z-50 bg-[#FFFF]"> 
- <nav class="bg-[#F9F7F3] ">
+ <header class="sticky top-0 z-50 background"> 
+ <nav class="bg-[#f5f2ec] ">
 
     
     <div class="navbar bg-base-100 container mx-auto bg-transparent pb-8 pt-4">
@@ -44,11 +52,11 @@
 
 <div class="flex justify-center pt-16 gap-5 pb-4"> 
 <div>
-<button class=" px-5 py-3 border border-t-rose-100 btn-ghost bg-[#B4F461] text-lg font-bold rounded-lg"> Donation</button>
+<button id="donate" class=" px-5 py-3 border border-t-rose-100 btn-ghost bg-[#B4F461] text-lg font-bold rounded-lg hover:bg-[#B4F461]"> Donation</button>
 
 </div>
 <div>
-<button class=" px-5 py-3 border border-t-rose-100 bg-[#B4F461] text-lg font-bold rounded-lg"> History</button>         
+<button id="history" class=" px-5 py-3 border border-t-rose-100 btn-ghost bg-[#B4F461] text-lg font-bold rounded-lg hover:bg-[#B4F461]"> History</button>         
 </div>
 
 </div>
@@ -86,13 +94,13 @@
                 <img class="mx-auto w-full object-cover lg:w-auto  mr-12"  src="./photos/feni.png" alt="">
             </div>
             <div class=" lg:pl-10 text-left lg:w-1/2 ">
-                <button class=" mt-8 flex bg-[#F3F3F3] px-4 py-2 gap-2 rounded-xl text-[#6A6A6A] font-bold lg:mt-0"> <p> <img src="./photos/coin.png" alt=""></p> <p class=" " id="">  600  BDT</p></button>
+                <button class=" mt-8 flex bg-[#F3F3F3] px-4 py-2 gap-2 rounded-xl text-[#6A6A6A] font-bold lg:mt-0"> <p> <img src="./photos/coin.png" alt=""></p> <p class=" " id="second-balance">  600  BDT</p></button>
 
                 <h2 class="py-5 text-lg font-extrabold">Donate fot Flood Relief in Feni, Banglasesh</h2>
 
                 <p class="w-11/12 pb-5 text-base "> The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.</p>
-                <input class="border w-10/12 py-4 rounded-lg pl-3" type="text" placeholder="Write Donation Amount">
-                <div class="pt-5"> <button class="w-10/12 bg-[#B4F461] py-4 rounded-xl text-lg font-extrabold"> Donate Now</button></div>
+                <input id="second-input" class="border w-10/12 py-4 rounded-lg pl-3" type="text" placeholder="Write Donation Amount">
+                <div id="second-donation" class="pt-5"> <button class="w-10/12 bg-[#B4F461] py-4 rounded-xl text-lg font-extrabold"> Donate Now</button></div>
             </div>
           </div>
         </div>
@@ -107,13 +115,13 @@
             <img class="mx-auto w-full object-cover lg:w-auto  mr-12"  src="./photos/quota-protest.png" alt="">
         </div>
         <div class=" lg:pl-10 text-left lg:w-1/2 ">
-            <button class=" mt-8 flex bg-[#F3F3F3] px-4 py-2 gap-2 rounded-xl text-[#6A6A6A] font-bold lg:mt-0"> <p> <img src="./photos/coin.png" alt=""></p> <p class=" " id="">  2400  BDT</p></button>
+            <button class=" mt-8 flex bg-[#F3F3F3] px-4 py-2 gap-2 rounded-xl text-[#6A6A6A] font-bold lg:mt-0"> <p> <img src="./photos/coin.png" alt=""></p> <p class=" " id="third-balance">  2400  BDT</p></button>
 
             <h2 class="py-5 text-lg font-extrabold">Aid for Injured in the Quota Movement</h2>
 
             <p class="w-11/12 pb-5 text-base "> The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.</p>
-            <input class="border w-11/12 py-4 rounded-lg pl-3" type="text" placeholder="Write Donation Amount">
-            <div class="pt-5"> <button class="w-11/12 bg-[#B4F461] py-4 rounded-xl text-lg font-extrabold"> Donate Now</button></div>
+            <input id="third-input" class="border w-11/12 py-4 rounded-lg pl-3" type="text" placeholder="Write Donation Amount">
+            <div id="third-donation" class="pt-5"> <button class="w-11/12 bg-[#B4F461] py-4 rounded-xl text-lg font-extrabold"> Donate Now</button></div>
         </div>
       </div>
     </div>
@@ -122,12 +130,34 @@
  </main>
 <!-- main end here  -->
 
+
+<!-- Open the modal using ID.showModal() method -->
+<button class="btn" onclick="my_modal_1.showModal()">open modal</button>
+<dialog id="my_modal_1" class="modal">
+  <div class="modal-box text-center">
+    <h3 class=" text-3xl font-extrabold pb-3">Congrates!</h3>
+    <img class="mx-auto pb-2" src="./photos/coin.png" alt="">
+    <p class="py-4 text-base">You Have Donated for Humankind</p>
+    <p class="text-lg font-extrabold "> Successfully</p>
+
+    <div class="modal-action mx-auto flex justify-center">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn text-sm font-bold">Close Confirmation</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+
+<!-- modal here  -->
+
+
 <footer class="py-16 bg-[#F9F7F3] mt-16">
 
 
 </footer>
 
-  <script src="secondfile.js"></script>
+<script src="secondfile.js"></script>
 <script src="dom.js"></script>
  </body>
  </html>
