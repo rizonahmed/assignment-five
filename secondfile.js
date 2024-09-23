@@ -59,7 +59,7 @@ function historyCreate(Amount){
     let text = d.toString();
     const div = document.createElement('div')
     div.innerHTML = `
-     <div class="border border-slate-200 rounded-lg p-5 py-8 mb-3">
+     <div class=" border border-slate-200 rounded-lg p-5 py-8 mb-3">
         <p class=" text-xl font-bold"> ${Amount} Taka is Donated for Aid for Injured in the Quota Movement</p>
         <p class="text-lg pt-2">  Date : ${text} </p>
     
