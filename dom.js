@@ -1,4 +1,8 @@
+document.getElementById('blog').addEventListener('click', function(){
+    window.location.href = './home.html'
+})
 
+ 
 document.getElementById('first-donation').addEventListener('click', function(){
     
     const firstInput = forInput('first-input');
@@ -8,8 +12,7 @@ document.getElementById('first-donation').addEventListener('click', function(){
         alert('Invalid Amount  Please Enter Correct Amount')
         return
     }
-
-    if(isNaN(firstInput)  ){
+    else if(isNaN(firstInput)  ){
           alert('Invalid Amount Please Enter Correct Amount')
           return
 
@@ -27,8 +30,12 @@ document.getElementById('first-donation').addEventListener('click', function(){
         return
     }
     document.getElementById('main-balance').innerText = subBalance;
+    
+    
+   const modal = document.getElementById('my_modal_1') 
+    modal.showModal()  
 
-
+    historyCreate(firstInput)
 })
 
 document.getElementById('second-donation').addEventListener('click', function(){
@@ -58,6 +65,11 @@ document.getElementById('second-donation').addEventListener('click', function(){
         return
     }
     document.getElementById('main-balance').innerText = subBalanceTwo; 
+
+    const modal = document.getElementById('my_modal_1') 
+    modal.showModal() 
+    
+    historyCreate2(secondInput)
 
 })
 
@@ -91,6 +103,31 @@ document.getElementById('third-donation').addEventListener('click', function(){
     }
     document.getElementById('main-balance').innerText = subBalanceThird; 
 
+    const modal = document.getElementById('my_modal_1') 
+    modal.showModal()  
+
+    historyCreate3(thirdInput)
+
 })
+ 
+document.getElementById('history').addEventListener('click', function(){
+ document.getElementById('donate').classList.remove('bg-[#B4F461]')
+ document.getElementById('history').classList.add('bg-[#B4F461]')
+ document.getElementById('footer').classList.add('hidden')
+})
+
+document.getElementById('donate').addEventListener('click', function(){
+ document.getElementById('history').classList.remove('bg-[#B4F461]')
+ document.getElementById('donate').classList.add('bg-[#B4F461]')
+ document.getElementById('footer').classList.remove('hidden')
+})
+   
+document.getElementById('donate').addEventListener('click',function(){
+    hideElement('donate-section')
+})
+document.getElementById('history').addEventListener('click',function(){
+    hideElement('history-section')
+})
+hideElement()
 
 
